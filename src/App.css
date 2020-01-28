@@ -1,38 +1,39 @@
-.App {
-  text-align: center;
+.google-places-autocomplete {
+  width: 100%;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.google-places-autocomplete__input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  border: none;
+  margin-bottom: 2px;
+  box-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.09);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.google-places-autocomplete__input:active,
+.google-places-autocomplete__input:focus,
+.google-places-autocomplete__input:hover {
+  outline: none;
+  border: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.google-places-autocomplete__suggestions-container {
+  background: white;
+  border-radius: 0 0 5px 5px;
+  color: black;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  box-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.09);
 }
 
-.App-link {
-  color: #61dafb;
+.google-places-autocomplete__suggestion {
+  font-size: 1rem;
+  text-align: left;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.google-places-autocomplete__suggestion--active {
+  background: #e0e3e7;
 }
