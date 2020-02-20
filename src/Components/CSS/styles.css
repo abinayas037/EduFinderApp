@@ -1,0 +1,25 @@
+.Restlist {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin-top: 15px;
+}
+.header1 {
+    grid-column: span 2;
+    padding-top: 40px;
+    padding-left: 50px;
+    justify-content: center;
+  }
+  .header2 {
+    text-align: left;
+    font-size: 25px;
+    padding-top: 25px;
+    padding-right: 15px;
+    font-weight: medium;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #43bdc2;
+    display: flex;
+    font-family: Avenir;
+    grid-column: span 10;
+    padding-left: 50px;
+  }
