@@ -1,14 +1,31 @@
+@media (min-width: 992px) {
+
+  html {
+    color: #030303;
+    font: caption;
+    padding-bottom: 3em;
+    padding-right: 4em;
+    padding-left: 4em;
+    padding-top: 2em;
+  }
+  .search {
+   
+    justify-content: center;
+
+  }
+
 .google-places-autocomplete {
   width: 100%;
   position: relative;
 }
 
-.google-places-autocomplete__input {
+.location-search-input {
   width: calc(100% - 20px);
   padding: 10px;
   border: none;
   margin-bottom: 2px;
   box-shadow: 0 1px 16px 0 rgba(0, 0, 0, 0.09);
+  justify-content: center;
 }
 
 .google-places-autocomplete__input:active,
@@ -37,23 +54,56 @@
 .google-places-autocomplete__suggestion--active {
   background: #e0e3e7;
 }
-.header1 {
-  grid-column: span 2;
-  padding-top: 40px;
-  padding-left: 50px;
-  display: flex;
-  justify-content: center;
+
+.Header {
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: 15px;
+
+
 }
-.header2 {
-  text-align: left;
-  font-size: 25px;
+.RestIcon {
+      grid-column: span 12;
+      padding: 0px;
+      grid-row: 1;
+      padding-top: 0px;
+      padding-bottom: 0px;
+      display: flex;
+      justify-content:center;
+      height: 100;
+}
+.content {
+  font-size: 40px;
   padding-top: 25px;
-  padding-right: 15px;
+  padding-right: 50px;
   font-weight: medium;
-  padding-left: 5px;
-  padding-right: 5px;
-  color: #43bdc2;
+  padding-left: 50px;
+  color: 	#40E0D0;
   font-family: Avenir;
   grid-column: span 10;
   padding-left: 50px;
 }
+
+.content1 {
+  margin-top: 15px;
+    color: #9b9b9b !important;
+    margin-bottom: 0px;
+    font-family: Avenir;
+    font-size: 25px;
+    padding-left:50px;
+    padding-right:25px;
+}
+.displayarea {
+ 
+  padding: 12px;
+  margin-top: 15px;
+  background-color:rgb(252, 195, 40);
+  font-size: 16px;
+  font-family: Avenir;
+  height: 150px;
+
+}
+}
+
+

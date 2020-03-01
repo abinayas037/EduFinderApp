@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import HeaderComponent from './Components/HeaderComponent';
 import AutoComplete from './Components/AutoComplete';
 import './App.css';
+import './Page.css';
 
 
 
@@ -22,6 +23,7 @@ class LocationSearchInput extends Component {
       <div className="head">    
          <HeaderComponent/>
          <AutoComplete/>
+         
          
       </div>
       

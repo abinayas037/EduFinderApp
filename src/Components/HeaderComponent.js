@@ -1,62 +1,40 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand, Jumbotron } from 'reactstrap';
+import { Jumbotron } from 'reactstrap';
 import restofinder from './Assets/Restfinder.jpg';
-
+import '../App.css';
+import '../Page.css';
 
 class HeaderComponent extends Component {
 
     
     render() {
         return(
-            <React.Fragment>
-            <Navbar dark>
-                <div className="container">
-                 <NavbarBrand href="/">Restaurant Finder App</NavbarBrand>
-                </div>
-            </Navbar>
+            
             <Jumbotron>
                 <div className="container-fluid">
-                    <div className="row row-header">
-                    <div className="RestIcon">
-                      <img src= {restofinder} className="header-logo" alt="logo" height="100"/>
+                    <div className="Header row row-header">
+                    <div className="RestIcon align-center col-12" height="70">
+                      <img src= {restofinder} className="header-logo d-flex mr-3 align-center"  alt="logo" height="70"/>
+                       
                      </div> 
-                        <div className="col-12 col-sm-6">
-                        <h2>Welcome To Our Restaurant Finder App</h2>
-                        <p>Here You can find 3 types of cuisines nearby</p>
-                        <ul>
+                        <div>
+                          <h2 className="content">Welcome To Our Restaurant Finder App</h2>
+                        </div>
+                        
+                        <p class="content1 align-self-center">Here You can find 3 types of cuisines nearby</p>
+                        <ul class="content1">
                             <li>Indian Reastaurant</li>
                             <li>Italian Restaurant</li>
                             <li>Middle-East Restaurant</li>
                         </ul>
-                        </div>
+                        
                     </div>
                 </div>
             </Jumbotron>
-    </React.Fragment>
+    
 
         );
     }
 }
 
 export default HeaderComponent;
-
-
-/*const HeaderComponent  = () =>
-    (
-            <div className="Restlist">          
-                    <div className={styles.header1}>
-                        <img src= {restofinder} className="header-logo" alt="logo"/>
-                    </div>
-                    <div className={styles.header2}>
-                        <h2>Wlecome To Our Restaurant Finder App</h2>
-                        <p>Here You can find 3 types of cuisines nearby</p>
-                        <ul>
-                            <li>Indian Reastaurant</li>
-                            <li>Italian Restaurant</li>
-                            <li>Middle-East Restaurant</li>
-                        </ul>
-                    </div>
-            </div>
-        )
-export default HeaderComponent;
--*/
