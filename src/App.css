@@ -94,16 +94,12 @@
     padding-left:50px;
     padding-right:25px;
 }
-.displayarea {
- 
-  padding: 12px;
-  margin-top: 15px;
-  background-color:rgb(252, 195, 40);
-  font-size: 16px;
-  font-family: Avenir;
-  height: 150px;
-
+.imgicon{
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-right:50px;
 }
+
 }
 
 

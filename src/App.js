@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import HeaderComponent from './Components/HeaderComponent';
 import AutoComplete from './Components/AutoComplete';
+
+//import IndianRes from './Components/IndianRes';
 import './App.css';
 import './Page.css';
+//import InButton from './Components/InButton';
 
 
 
@@ -14,18 +17,21 @@ class LocationSearchInput extends Component {
     }; 
   }  
     
-    
- 
 
   render() {   
     console.log("bye",this.state.latlng)
    return (
       <div className="head">    
-         <HeaderComponent/>
-         <AutoComplete/>
+         <HeaderComponent/>     
+         <AutoComplete/> 
          
          
-      </div>
+       
+        
+       </div>
+         
+         
+    
       
     );
   }
