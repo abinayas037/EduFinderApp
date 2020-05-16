@@ -1,3 +1,10 @@
+Educational Institutions Finder App
+
+This app helps you to find the educational institutions nearby. It uses your GeoLocation to find your location and serve you a institutions list based on the category of Elementary and high school. 
+
+This app uses the Foursquare API for institutions data and Google Maps API to find your address according to Lat and Long obtained from Geo Location.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
