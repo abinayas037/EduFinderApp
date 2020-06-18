@@ -1,4 +1,5 @@
-Educational Institutions Finder App
+## Educational Institutions Finder App
+ <img width="1433" alt="EduFinder" src="https://user-images.githubusercontent.com/30860608/84968567-cad1ca80-b0e4-11ea-9089-dfde08a2191e.png">
 
 This app helps you to find the educational institutions nearby. It uses your GeoLocation to find your location and serve you a institutions list based on the category of Elementary and high school. 
 
