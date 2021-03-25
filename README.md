@@ -1,8 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-Live demo: https://edufinder.netlify.app/
 
 
 ## Available Scripts
+Live demo: https://edufinder.netlify.app/
+
 
 In the project directory, you can run:
 
