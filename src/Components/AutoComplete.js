@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import PlacesAutoComplete from "react-places-autocomplete";
+ import PlacesAutoComplete from "react-places-autocomplete";
 import { Jumbotron, Card, CardTitle, CardText, CardBody, Button } from "reactstrap";
 import { geocodeByAddress, getLatLng } from "react-places-autocomplete";
 import allbutton from './Assets/AllEdu.png';
@@ -101,88 +101,93 @@ class AutoComplete extends Component {
           </PlacesAutoComplete>
         </Jumbotron>
         {/* <AllButton/> */}
-  <div class="imagebutton">
-    <div class="row">
-      <div class="imgicon">
-        <Button onClick={ ()=> { 
-          this.setState({
-            schoolType: ""
-          });
-          this.render() 
-          }}><img src={allbutton} alt="logo" height="50" width="50"/>All</Button>
-      </div>
-      <div class="imgicon">
-        <Button onClick={ ()=> { 
-          this.setState({
-            schoolType: "4f4533804b9074f6e4fb0105"
-          });
-          this.render() 
-          }}><img src={elembutton} alt="logo" height="50" width="50"/>Elementary</Button>
-      </div>
-      <div class="imgicon">
-        <Button onClick={ ()=> { 
-          this.setState({
-            schoolType: "4bf58dd8d48988d13d941735"
-          });
-          this.render() 
-          }}><img src={hsclbutton} alt="logo" height="50" width="50"/>Highschool</Button>
-      </div>
+          <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">   
+            <div class="imgicon" role="group" aria-label="First group">
+              <Button onClick={ ()=> { 
+              this.setState({
+                schoolType: ""
+              });
+              this.render() 
+              }}><img src={allbutton} alt="logo" height="50" width="50"/>All</Button>
+            </div>
+            <div class="imgicon" role="group" aria-label="Second group">
+              <Button onClick={ ()=> { 
+              this.setState({
+                schoolType: "4f4533804b9074f6e4fb0105"
+              });
+              this.render() 
+              }}><img src={elembutton} alt="logo" height="50" width="50"/>Elementary</Button>
+            </div>
+            <div class="imgicon" role="group" aria-label="Third group">
+              <Button onClick={ ()=> { 
+              this.setState({
+                schoolType: "4bf58dd8d48988d13d941735"
+              });
+              this.render() 
+              }}><img src={hsclbutton} alt="logo" height="50" width="50"/>Highschool</Button>
+            </div>  
+          </div>
+      <div class="cardDisplay">
+            {
+            
+            this.state.schoolType !== "" 
+            
+            ?
+      
+            this.state.venues
+            .filter(venue => venue.categories[0].id === this.state.schoolType)
+            .map(venue => {
+              const catID = venue.categories[0].id;
+              let colorID = catColors.filter( cat => cat.id === catID);
+              colorID = colorID[0] !=null ? colorID[0].backgroundColor : '#B1E5F2';
+              return (  
+            
+              <div class="card">
+                <Card key={venue.name} style={{ "backgroundColor": colorID}}>
+                  <div className="displayarea">
+                    <CardBody class="card-group-item-success">
+                      <CardTitle> {venue.name} </CardTitle>
+                      <CardText>                  
+                        {venue.location.address} {venue.location.postalcode}
+                        {venue.location.cc} {venue.location.city}
+                        {venue.location.state} {venue.location.country}
+                      </CardText>
+                    </CardBody>
+                  </div>
+                </Card>
+              </div>
+            );
+          })
+
+            :
+
+            this.state.venues
+            .map(venue => {
+              const catID = venue.categories[0].id;
+              let colorID = catColors.filter( cat => cat.id === catID);
+              colorID = colorID[0] !=null ? colorID[0].backgroundColor : '#B1E5F2';
+              return ( 
+                <div class="card"> 
+                  <Card key={venue.name} style={{ "backgroundColor": colorID}}>
+                    <div className="displayarea">
+                      <CardBody class="card-group-item-success">
+                        <CardTitle> {venue.name} </CardTitle>
+                        <CardText>                  
+                          {venue.location.address} {venue.location.postalcode}
+                          {venue.location.cc} {venue.location.city}
+                          {venue.location.state} {venue.location.country}
+                        </CardText>
+                      </CardBody>
+                    </div>
+                  </Card>
+                </div>
+            
+            );
+          })
+
+      }
     </div>
   </div>
-
-        {
-        
-        this.state.schoolType !== "" 
-        
-        ?
-      
-        this.state.venues
-        .filter(venue => venue.categories[0].id === this.state.schoolType)
-        .map(venue => {
-          const catID = venue.categories[0].id;
-          let colorID = catColors.filter( cat => cat.id === catID);
-          colorID = colorID[0] !=null ? colorID[0].backgroundColor : '#B1E5F2';
-          return (  
-            <Card key={venue.name} style={{ "backgroundColor": colorID}}>
-              <div className="displayarea">
-                <CardBody class="card-group-item-success">
-                  <CardTitle> {venue.name} </CardTitle>
-                  <CardText>                  
-                    {venue.location.address} {venue.location.postalcode}
-                    {venue.location.cc} {venue.location.city}
-                    {venue.location.state} {venue.location.country}
-                  </CardText>
-                </CardBody>
-              </div>
-            </Card>
-          );
-        })
-
-        :
-
-        this.state.venues
-        .map(venue => {
-          const catID = venue.categories[0].id;
-          let colorID = catColors.filter( cat => cat.id === catID);
-          colorID = colorID[0] !=null ? colorID[0].backgroundColor : '#B1E5F2';
-          return (  
-            <Card key={venue.name} style={{ "backgroundColor": colorID}}>
-              <div className="displayarea">
-                <CardBody class="card-group-item-success">
-                  <CardTitle> {venue.name} </CardTitle>
-                  <CardText>                  
-                    {venue.location.address} {venue.location.postalcode}
-                    {venue.location.cc} {venue.location.city}
-                    {venue.location.state} {venue.location.country}
-                  </CardText>
-                </CardBody>
-              </div>
-            </Card>
-          );
-        })
-
-      }  
-      </div>
     );
   }
 }

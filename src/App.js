@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import HeaderComponent from './Components/HeaderComponent';
 import AutoComplete from './Components/AutoComplete';
 
-//import IndianRes from './Components/IndianRes';
 import './App.css';
 import './Page.css';
 //import InButton from './Components/InButton';
